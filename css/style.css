@@ -1,0 +1,223 @@
+@import url('https://fonts.googleapis.com/css2? family= Kumbh+Sans:wght@400;700 & display=swap');
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-size: 12px;
+    background: linear-gradient( hsl(273, 75%, 66%), hsl(240, 73%, 65%));
+    font-family: 'Kumbh Sans', sans-serif;
+    color:  hsl(238, 29%, 16%);
+}
+
+.container{
+    width: 80%;
+    height: 540px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    border-left: none;
+    border-radius: 1em;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    position: relative;
+    background: white;
+    box-sizing: border-box;
+}
+.images{
+    background-image: url(../images/bg-pattern-desktop.svg);
+    background-repeat: no-repeat;
+    background-position: -500px -290px;
+    display: flex;
+    width: 50%;
+    height: 540px;
+    align-items: center;
+    align-content: flex-start;
+    overflow: hidden;
+    
+}
+.container >img{
+    width: 16%;
+    position: absolute;
+    left: -80px;
+    bottom: 125px;
+}
+.images> img{
+    width: 70%;
+    overflow: visible;
+    height: 80%;
+    object-fit:cover;
+}
+.info{
+    width: 40%;
+    box-sizing: border-box;
+    height: 500px;
+}
+.info > h2{
+    margin-top: 30px;
+    font-size: 2rem;
+}
+
+/* .accordion  */
+
+.accordion-content {
+    display: none;
+} 
+.accordion-title{
+    cursor: pointer;
+    padding: 5px;
+    border-bottom: 2px solid gainsboro;
+    margin-top: 20px;
+}
+.title-active{
+    color: hsl(14, 88%, 65%);
+    transition: 0.5s;
+}
+.accordion-title--open + .accordion-content{
+    display: block;
+}
+h3>img{
+    width: 4%;
+    height: 4%;
+    float: right;
+}
+.rotate {
+    transform: rotate(180deg);
+    transition: 0.5s;
+}
+/* breakpoints  */
+@media (max-width: 1024px) {
+    .container{
+        width: 90%;
+    }
+    .container >img{
+        width: 20%;
+        left: -90px;
+        bottom: 130px;
+    }
+}
+@media (max-width: 900px) {
+    .container{
+        width: 95%;
+    }
+    .container >img{
+        width: 20%;
+        position: absolute;
+        left: -80px;
+        bottom: 140px;
+    }
+    .images{
+        width: 60%;
+    }
+    .images> img{
+        width: 125px;
+        object-fit: cover;
+        margin-left: 100px;
+    }
+}
+@media (max-width: 800px) {
+    /* Estilos específicos para pantallas pequeñas */
+    .container{
+        flex-direction: column;
+        width: 90%;
+        margin-top: 200px;
+        padding: 0;
+        height: 660px;
+    } 
+    .container >img{
+        width: 18%;
+        left: 220px;
+        top: -40px;
+        margin-left: 0;
+    } 
+    .images{
+        overflow: visible;
+        width: 100%;
+        height: 200px;
+        justify-content: center;
+        align-content: flex-start;
+        background-position: 240px -130px;
+        background-size:40%
+    }
+    .images> img{
+        width: 260px;
+        margin-bottom: 220px;
+    }
+    .info{
+        width: 95%;
+        margin: 0 auto;
+    }
+    .info > h2{
+        text-align: center;
+    }
+}
+@media (max-width: 700px) {
+    .container{
+        height: 780px;
+    }
+    .container > img{
+        left: 130px;
+        top: -30px;
+    }
+    .images > img{
+        margin-left: 0;
+    }
+}
+@media (max-width:600px) {
+    .container{
+        height: 800px;
+        margin-top: 600px;
+    }
+    .container >img{
+        width: 20%;
+        left: 110px;
+        top: -48px;
+    }
+    .images{
+        height: 170px;
+        background-position: 100px -160px;
+        background-size:60%
+    }
+    .images > img{
+        margin-left: 0;
+    }
+}
+@media (max-width: 500px) {
+    .container{
+        height: 780px;
+    }
+    .container > img{
+        width: 25%;
+        left: 60px;
+        top: -45px;
+    }
+    .images{
+        background-position: 90px -120px;
+        background-size:60%
+    }
+}
+@media (max-width: 400px) {
+    .container{
+        height: 780px;
+        margin-top: 500px;
+    }
+    .container >img{
+        width: 40%;
+        left: -5px;
+        top: -45px;
+    }
+    .images{
+        height: 180px;
+        background-position: 40px -120px;
+        background-size:80%;
+    }
+    .images> img{
+        width: 290px;
+        margin-left: 0;
+        margin-bottom: 200px;
+    }
+    .info{
+        margin: 0;
+    }
+}
